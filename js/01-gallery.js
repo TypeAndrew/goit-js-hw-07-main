@@ -39,12 +39,10 @@ initGallery();
 galleryEl.addEventListener("click", (event) => {
     if (event.target.nodeName === "IMG") {
 
-
-        let instance = basicLightbox.create(`
-            <div class="modal">
-            <img src="${event.target.currentSrc}" width="1200" height="800">
-            </div>
-        `);
+        let galleryItemEl = document.createElement("div");
+        galleryItemEl.classList.add("modal");
+        galleryItemEl.innerHTML = 'img src="${event.target.currentSrc}" width="1200" height="800';
+        let instance = basicLightbox.create(galleryItemEl);
 
         galleryEl.style.display = 'none';
 
