@@ -43,11 +43,11 @@ galleryEl.addEventListener("click", (event) => {
             <div class="modal">
             <img src="${event.target.currentSrc}" width="1200" height="800">
             </div>
-        `)
+        `);
 
         galleryEl.style.display = 'none';
 
-        instance.show()
+        instance.show();
 
 
     } else {
