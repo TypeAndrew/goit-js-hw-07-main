@@ -24,7 +24,9 @@ function initGallery() {
 
         galleryLinkEl.append(imgEl);
 
+         let lightbox = new SimpleLightbox('.gallery a', { /* options */ });
 
+        
 
     });
 };
@@ -34,11 +36,9 @@ initGallery();
 galleryEl.addEventListener("click", (event) => {
     if (event.target.nodeName === "IMG") {
 
-
-        let lightbox = new SimpleLightbox('.gallery a', { /* options */ });
-
-        lightbox.show();
-
+      lightbox.show();  
+       
+    
 
     } else {
         console.log("border!!!!");
