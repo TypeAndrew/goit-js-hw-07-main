@@ -41,7 +41,7 @@ galleryEl.addEventListener("click", (event) => {
 
         let galleryItemEl = document.createElement("div");
         galleryItemEl.classList.add("modal");
-        galleryItemEl.innerHTML = 'img src="${event.target.currentSrc}" width="1200" height="800';
+        galleryItemEl.innerHTML = `img src="${event.target.currentSrc}" width="1200" height="800`;
         let instance = basicLightbox.create(galleryItemEl);
 
         galleryEl.style.display = 'none';
