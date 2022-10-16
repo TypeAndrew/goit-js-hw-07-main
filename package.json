@@ -1,0 +1,11 @@
+{
+  "name": "task7",
+  "version": "1.0.0",
+  "description": "task 7",
+  "main": "index.html",
+  "scripts": {
+    "test": "test"
+  },
+  "author": "",
+  "license": "ISC"
+}
