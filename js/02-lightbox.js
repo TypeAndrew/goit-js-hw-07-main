@@ -4,13 +4,28 @@ import { galleryItems } from './gallery-items.js';
 let galleryEl = document.querySelector(".gallery");
 galleryEl.classList.add("gallery");
 
+let galleryList = ``;
 
 function initGallery() {
 
     galleryItems.forEach(element => {
 
 
-        let galleryLinkEl = document.createElement("a");
+    
+         galleryList +=`<a class="gallery__item" href="${element.original}">
+                        <img class="gallery__image" src="${element.preview}" alt="${element.description}" />
+                        </a>`;
+        
+
+    });
+    galleryEl.innerHTML = galleryList;
+    let lightbox = new SimpleLightbox('.gallery a', { captionsData: 'alt', captionDelay: 250  });
+
+};
+
+initGallery();
+
+    /*let galleryLinkEl = document.createElement("a");
 
         galleryLinkEl.classList.add("gallery__item");
         galleryLinkEl.setAttribute("href", element.original);
@@ -22,11 +37,4 @@ function initGallery() {
         imgEl.setAttribute("src", element.preview);
         imgEl.setAttribute("alt", element.description);
 
-        galleryLinkEl.append(imgEl);
-
-    });
-    let lightbox = new SimpleLightbox('.gallery a', { /* options */ });
-};
-
-initGallery();
-
+        galleryLinkEl.append(imgEl);*/
